@@ -83,7 +83,7 @@ with st.container():
             st.bar_chart(grouped_data)
 
         except Exception as e:
-            if str(e) == "buffer source array is ready-only":
+            if str(e) == "buffer source array is read-only":
                 empty_df = pd.DataFrame()
                 st.table(empty_df)
             else:
