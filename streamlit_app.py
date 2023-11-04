@@ -87,7 +87,7 @@ with st.container():
                 empty_df = pd.DataFrame()
                 st.table(empty_df)
             else:
-                st.error(f"An error occurred: {e}")
+                st.error(f"{e}")
 
 
 st.write('</div>', unsafe_allow_html=True)
