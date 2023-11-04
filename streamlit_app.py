@@ -10,7 +10,7 @@ st.title("Key Role Tracker")
 # 2. load data
 @st.cache_data
 def load_data():
-    df_main = pd.read_excel('/Users/jiewu/Documents/Streamlit/Tracker/Tracker_dataset.xlsx')
+    df_main = pd.read_excel('Tracker_dataset.xlsx')
 
     return df_main
 
