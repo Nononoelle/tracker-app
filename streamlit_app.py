@@ -16,8 +16,8 @@ def load_data():
 
 
 # 3. save file
-def save_file():
-    df.to_excel('/Users/jiewu/Documents/Streamlit/Tracker/Tracker_dataset_new.xlsx', index=False)
+# def save_file():
+#     df.to_excel('Tracker_dataset_new.xlsx', index=False)
 
 # 4. page layout
 ## Left sidebar
@@ -64,15 +64,15 @@ with st.container():
                 st.write(filtered_data)
 
             # save button
-            button_clicked = st.button("Save", key="save_file")
-            button_executed = False
+            # button_clicked = st.button("Save", key="save_file")
+            # button_executed = False
 
-            if button_clicked:
-                save_file()
-                button_executed = True
+            # if button_clicked:
+            #     save_file()
+            #     button_executed = True
 
-            if button_executed:
-                st.write("The File has been updated and saved")
+            # if button_executed:
+            #     st.write("The File has been updated and saved")
             # bar chart on key role
             st.subheader("Key Role Distribution")
             category_columns = ["Country", "Business Line", "Department"]
