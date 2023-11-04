@@ -31,8 +31,7 @@ with st.container():
         try:
             df_upload = pd.read_excel(uploaded_file)
             df_upload["Employee ID"] = df_upload["Employee ID"].str.capitalize()
-            df_upload = df_upload[["Employee ID", "Key Role"]]
-            df_upload.rename(columns={"Key Role":"New Key Role"}, inplace=True)
+            df_upload = df_upload[["Employee ID", "New Key Role"]]
             df_main = load_data()
             df = pd.merge(df_main, df_upload, on="Employee ID", how="left")
             for i in df_upload["Employee ID"]:
@@ -74,7 +73,6 @@ with st.container():
 
             if button_executed:
                 st.write("The File has been updated and saved")
-                
             # bar chart on key role
             st.subheader("Key Role Distribution")
             category_columns = ["Country", "Business Line", "Department"]
